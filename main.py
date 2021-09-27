@@ -22,12 +22,10 @@ if args.city_id:
 def main():
 
     connection=create_connection()
-
     filename=write_weather_data(get_current_weather(args.city_id))
-
     df_to_sql=set_datetime_col_as_row_index(convert_kelvin_to_celsius(
         change_col_name(keep_columns(convert_dict_to_df(filename)))))
-    
+        
     update_db(df_to_sql,connection)
 
     close_connection(connection)

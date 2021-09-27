@@ -1,7 +1,6 @@
 import sqlite3
 import pandas as pd
 
-
 def update_db(pandas_df, connection):
     """ Upload pandas dataframe to sql database
     """

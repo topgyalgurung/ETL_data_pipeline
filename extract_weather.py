@@ -1,3 +1,4 @@
+
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -6,7 +7,6 @@ token=os.environ.get("api-token")
 
 import requests
 import json
-
 
 def get_current_weather(id):
     """ Returns current weather data by city id (New York by default)
